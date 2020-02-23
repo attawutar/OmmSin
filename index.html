@@ -12,35 +12,47 @@
         background: rgb(236, 206, 206);
     }
 
-    #left-column,
-    #right-column {
-        min-height: 300px;
-    }
-
     #wrapper {
         display: flex;
         width: 100%px;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     #left-column {
-        width: 40%;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #right-column {
-        width: 40%;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+
     }
 
     #left-column h3,
     #right-column h3 {
         text-align: center;
+        font-size: 40px;
+        margin: 0;
+        margin-top: 20px;
+
     }
 
     /* Drag and drop related CSS */
     .draggable-item {
         padding: 10px;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         box-sizing: border-box;
     }
 
@@ -62,10 +74,10 @@
     }
 
     .drop-area {
-        width: 100%;
-        margin-top: 10%;
+        width: 80%;
         height: 75%;
         position: relative;
+        margin-bottom: 25px;
     }
 
     .drop-area:after {
@@ -91,7 +103,7 @@
     p{
         text-align: center;
         background-color: rgb(204, 153, 146);
-        font-size: 3vw;
+        font-size: 35px;
     }
     /* h3{
         text-align: center;
@@ -102,18 +114,20 @@
 
 <body>
     <div id="wrapper">
-        <div id="left-column">
-            <h3>Coins</h3>
-            <img class="draggable-item" src="coin.png"></img>
-            <img class="draggable-item" src="coin.png"></img>
-            <img class="draggable-item" src="coin.png"></img>
-            <img class="draggable-item" src="coin.png"></img>
-            <img class="draggable-item" src="coin.png"></img>
-            <img class="draggable-item" src="coin.png"></img>
-        </div>
+
         <div id="right-column">
             <h3>Piggy Bank</h3>
             <img class="drop-area" src="pig.png"></img>
+        </div>
+
+        <div id="left-column">
+            <!-- <h3>Coins</h3> -->
+            <img class="draggable-item" src="coin.png"></img>
+            <img class="draggable-item" src="coin.png"></img>
+            <img class="draggable-item" src="coin.png"></img>
+            <img class="draggable-item" src="coin.png"></img>
+            <img class="draggable-item" src="coin.png"></img>
+            <img class="draggable-item" src="coin.png"></img>
         </div>
     </div>
     <p id="coin">Coin : 0</p>
